@@ -3,6 +3,6 @@ Handlebars.registerHelper 'formField', (options) ->
   new Handlebars.SafeString """
   <div class=\"input\">\
     <label>#{options.label}</label>\
-    <input name="#{options.name}" type="#{options.type}" />\
+    <input name="#{options.name}" type="#{options.type}" id="#{options.name}" />\
   </div>
   """
