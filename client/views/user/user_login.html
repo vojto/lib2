@@ -1,0 +1,21 @@
+<template name="_field">
+  <div class="input">
+      <label>{{label}}</label>
+      <input name="{{name}}" type="{{type}}" />
+    </div>
+</template>
+
+<template name="userLogin">
+  <h2>Log in</h2>
+
+  <form>
+    {{formField name="username" label="Username" type="text"}}
+
+    {{formField name="password" label="Password" type="password"}}
+
+    <div class="actions">
+      <input type="submit" />
+    </div>
+
+  </form>
+</template>

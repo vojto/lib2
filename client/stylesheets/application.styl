@@ -1,0 +1,84 @@
+//= require_tree .
+
+@import 'nib'
+@import 'colors'
+
+.clearfix
+  clearfix()
+
+// Typo
+// -------------------------------------------------
+
+body, input
+  font-family "Helvetica Neue", sans-serif
+  font-size 14px
+
+h1, h2, h3
+  // margin 0
+  // margin-bottom 10px
+
+h3
+  font-weight 400
+  font-size 24px
+
+a
+  color green1
+
+// Layout
+// -------------------------------------------------
+
+body
+  background green1
+  margin 0
+  padding 0
+
+// Homepage
+// -------------------------------------------------
+
+.clearfix
+  clearfix()
+
+// Basic
+// -------------------------------------------------
+
+body
+  background #fff
+
+  #header
+    background-color green1
+    height 50px
+    // padding-top 10px
+
+    a
+      color #fff
+
+    a#logo
+      image 'logo_small.png' 40px 40px
+      background-repeat no-repeat
+      background-position center center
+      width 40px
+      height 40px
+      display block
+      margin auto
+      position relative
+      top 5px
+      text-indent -999px
+
+
+    #status
+      float right
+      color #fff
+      padding-top 17px
+      padding-right 20px
+
+    div.picture
+      float left
+      margin-top -7px
+      margin-right 15px
+      img
+        width 30px
+        border-radius 50%
+        border 2px solid #40CA59
+
+  #content
+    padding 20px
