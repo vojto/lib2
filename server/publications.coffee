@@ -16,7 +16,7 @@ Meteor.publish 'messages', ->
     handle: @
     collection: Messages
     filter: {}
-    options: {sort: {timestamp: -1}}
+    options: {sort: {timestamp: -1}, limit: 30}
     mappings: [{
       key: 'userId'
       collection: Meteor.users
