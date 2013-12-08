@@ -1,0 +1,17 @@
+<template name="messagesList">
+  <div id="messages">
+    <div class="input">
+      <form>
+        <input type="text" />
+      </form>
+    </div>
+
+    <div class="list">
+      {{#each messages}}
+        {{content}}
+        <br />
+      {{/each}}
+    </div>
+
+  </div>
+</template>

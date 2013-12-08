@@ -1,5 +1,5 @@
 Meteor.Router.add
-  '/': 'welcome'
+  '/': 'messagesList'
 
   '/prihlasenie': 'userLogin'
   '/registracia': 'userSignup'
@@ -30,5 +30,5 @@ Meteor.Router.filters
     page
 
 Meteor.Router.filter 'requireNotLoggedIn', only: 'userLogin'
-Meteor.Router.filter 'requireLoggedIn', only: ['photoAdd']
+Meteor.Router.filter 'requireLoggedIn', only: ['photoAdd', 'messagesList']
 Meteor.Router.filter 'removeFlash'
