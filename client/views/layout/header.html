@@ -3,7 +3,7 @@
     {{#if currentUser}}
       <div class="picture">
         <a href="{{userProfilePath currentUser}}">
-          <img src="{{userAvatar}}">
+          <img src="{{userAvatar currentUser}}">
         </a>
       </div>
       Si prihlaseny ako {{currentUser.username}}.

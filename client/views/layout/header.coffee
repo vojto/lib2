@@ -5,8 +5,9 @@ Template.layoutHeader.events
     Meteor.Router.to('/')
 
 Template.layoutHeader.helpers
-  userAvatar: ->
-    photo = Photos.findOne(Meteor.user().currentPhotoId)
+  # TODO: Make this helper shared
+  userAvatar: (user) ->
+    photo = Photos.findOne(user.currentPhotoId)
     if photo
       "/photos/#{photo.nameSmall}"
     else
