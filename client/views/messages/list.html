@@ -8,8 +8,13 @@
 
     <div class="list">
       {{#each messages}}
-        {{content}}
-        <br />
+        <div class="message">
+          <div class="picture"><img src="/photos/{{userPhoto this}}"></div>
+          <strong>
+            {{user this}}
+          </strong>
+          {{content}}
+        </div>
       {{/each}}
     </div>
 

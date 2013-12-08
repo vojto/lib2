@@ -9,5 +9,6 @@ Meteor.methods
       throw new Meteor.Error 402, 'missing content'
 
     message.userId = user._id
+    message.timestamp = new Date().getTime()
 
     Messages.insert(message)

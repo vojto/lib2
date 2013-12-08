@@ -1,6 +1,7 @@
 {
   "packages": {
     "router": {},
-    "imagemagick": {}
+    "imagemagick": {},
+    "publish-with-relations": {}
   }
 }

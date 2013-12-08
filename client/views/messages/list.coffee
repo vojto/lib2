@@ -11,4 +11,12 @@ Template.messagesList.events
 
 Template.messagesList.helpers
   messages: ->
-    Messages.find()
+    Messages.find({}, {sort: {timestamp: -1}})
+
+  user: (message) ->
+    user = Meteor.users.findOne(message.userId)
+    user.username
+
+  userPhoto: (message) ->
+    user = Meteor.users.findOne(message.userId)
+    Photos.findOne(user.currentPhotoId).nameSmall

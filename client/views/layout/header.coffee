@@ -6,4 +6,6 @@ Template.layoutHeader.events
 
 Template.layoutHeader.helpers
   userAvatar: ->
-    Photos.findOne(id: Meteor.user().currentPhotoId)
+    console.log 'looking up photo with id', Meteor.user()
+    console.log Meteor.user().currentPhotoId
+    Photos.findOne(Meteor.user().currentPhotoId)
