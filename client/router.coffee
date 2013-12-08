@@ -1,6 +1,8 @@
 Meteor.Router.add
   '/': 'userLogin'
 
+  '/registracia': 'userSignup'
+
   # '/posts/:_id':
   #   to: 'postPage'
   #   and: (id) -> Session.set('currentPostId', id)

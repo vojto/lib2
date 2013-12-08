@@ -1,0 +1,19 @@
+<template name="userSignup">
+  <h2>Registracia</h2>
+
+  <form>
+    {{formField name="username" label="Nick" type="text"}}
+    {{formField name="email" label="E-mail" type="text"}}
+
+    {{formField name="password" label="Heslo" type="password"}}
+    {{formField name="password_confirmation" label="Potvrdenie hesla" type="password"}}
+
+    {{formField name="faculty" label="Fakulta" type="text"}}
+    {{formField name="year" label="Rocnik" type="text"}}
+
+    <div class="actions">
+      <input type="submit" value="Zaregistrovat" />
+    </div>
+
+  </form>
+</template>

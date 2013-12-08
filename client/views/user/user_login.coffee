@@ -8,4 +8,6 @@ Template.userLogin.events
     password = target.find('#password').val()
 
     Meteor.loginWithPassword username, password, (err) ->
-      console.log 'done logging in:', err
+      if err
+        Session.set('flash', 'Prihlasenie sa nepodarilo :-(')
+      
