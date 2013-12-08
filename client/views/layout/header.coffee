@@ -3,3 +3,7 @@ Template.layoutHeader.events
     ev.preventDefault()
     Meteor.logout()
     Meteor.Router.to('/')
+
+Template.layoutHeader.helpers
+  userAvatar: ->
+    Photos.findOne(id: Meteor.user().currentPhotoId)
