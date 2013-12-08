@@ -9,5 +9,6 @@ Template.userLogin.events
 
     Meteor.loginWithPassword username, password, (err) ->
       if err
-        Session.set('flash', 'Prihlasenie sa nepodarilo :-(')
-      
+        Flash.error("Prihlasenie sa nepodarilo: #{err.reason}")
+      else
+        Flash.reset()

@@ -9,3 +9,6 @@ class @Flash
     Session.set 'flash',
       type: type
       message: message
+
+  @reset: ->
+    Session.set 'flash', null

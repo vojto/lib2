@@ -13,6 +13,13 @@ Meteor.Router.add
   # '/submit': 'postSubmit'
 
 Meteor.Router.filters
+  'requireLoggedIn': (page) ->
+    if Meteor.user()
+      page
+    else if Meteor.loggingIn()
+      'loading'
+    else
+      'userLogin'
   'requireNotLoggedIn': (page) ->
     if Meteor.user()
       '/'
@@ -20,3 +27,4 @@ Meteor.Router.filters
       page
 
 Meteor.Router.filter 'requireNotLoggedIn', only: 'userLogin'
+Meteor.Router.filter 'requireLoggedIn', only: ['photoAdd']
