@@ -30,7 +30,7 @@ Template.userSignup.events
 
     Accounts.createUser options, (err) ->
       if err
-        console.log err
-        Flash.error 'Nepodarilo sa vytvorit konto. :-('
+        Flash.error "Nepodarilo sa vytvorit konto: #{err.reason}"
       else
-        Flash.success 'Tvoje konto bolo vytvorene a bol si prihlaseny!'
+        # Flash.success 'Tvoje konto bolo vytvorene! Teraz si vyber nejaku fotku.'
+        Meteor.Router.to(Meteor.Router.photoAddPath())

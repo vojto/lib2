@@ -1,9 +1,12 @@
 <template name="layoutHeader">
   <div id="status">
     {{#if currentUser}}
-      Logged in!
+      Si prihlaseny ako {{currentUser.username}}.
+      <a href="#" class="logout">Odhlasit sa</a>
     {{else}}
-      Not logged in :-(
+      <a href="{{userLoginPath}}">Prihlasit sa</a>
+      |
+      <a href="{{userSignupPath}}">Registracia</a>
     {{/if}}
   </div>
 </template>

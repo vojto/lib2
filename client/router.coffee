@@ -4,19 +4,19 @@ Meteor.Router.add
   '/prihlasenie': 'userLogin'
   '/registracia': 'userSignup'
 
+  '/registracia/foto': 'photoAdd'
+
   # '/posts/:_id':
   #   to: 'postPage'
   #   and: (id) -> Session.set('currentPostId', id)
 
   # '/submit': 'postSubmit'
 
-# Meteor.Router.filters
-#   'requireLogin': (page) ->
-#     if Meteor.user()
-#       page
-#     else if Meteor.loggingIn()
-#       'loading'
-#     else
-#       'accessDenied'
+Meteor.Router.filters
+  'requireNotLoggedIn': (page) ->
+    if Meteor.user()
+      '/'
+    else
+      page
 
-# Meteor.Router.filter 'requireLogin', only: 'postSubmit'
+Meteor.Router.filter 'requireNotLoggedIn', only: 'userLogin'
