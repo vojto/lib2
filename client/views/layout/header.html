@@ -1,7 +1,11 @@
 <template name="layoutHeader">
   <div id="status">
     {{#if currentUser}}
-      <div class="picture"><img src="/photos/{{userAvatar.nameSmall}}"></div>
+      <div class="picture">
+        <a href="{{userProfilePath currentUser}}">
+          <img src="{{userAvatar}}">
+        </a>
+      </div>
       Si prihlaseny ako {{currentUser.username}}.
       <a href="#" class="logout">Odhlasit sa</a>
     {{else}}

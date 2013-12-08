@@ -6,6 +6,10 @@ Meteor.Router.add
 
   '/registracia/foto': 'photoAdd'
 
+  '/profil/:username':
+    to: 'userProfile'
+    and: (username) -> Session.set('profileUsername', username)
+
   # '/posts/:_id':
   #   to: 'postPage'
   #   and: (id) -> Session.set('currentPostId', id)

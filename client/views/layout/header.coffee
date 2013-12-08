@@ -6,6 +6,9 @@ Template.layoutHeader.events
 
 Template.layoutHeader.helpers
   userAvatar: ->
-    console.log 'looking up photo with id', Meteor.user()
-    console.log Meteor.user().currentPhotoId
-    Photos.findOne(Meteor.user().currentPhotoId)
+    photo = Photos.findOne(Meteor.user().currentPhotoId)
+    if photo
+      "/photos/#{photo.nameSmall}"
+    else
+      '/default_avatar.png'
+      # TODO show default image if nothing found
