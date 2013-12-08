@@ -1,6 +1,7 @@
 Meteor.Router.add
-  '/': 'userLogin'
+  '/': 'welcome'
 
+  '/prihlasenie': 'userLogin'
   '/registracia': 'userSignup'
 
   # '/posts/:_id':
