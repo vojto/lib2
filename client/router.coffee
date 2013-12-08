@@ -25,6 +25,10 @@ Meteor.Router.filters
       '/'
     else
       page
+  'removeFlash': (page) ->
+    Flash.reset()
+    page
 
 Meteor.Router.filter 'requireNotLoggedIn', only: 'userLogin'
 Meteor.Router.filter 'requireLoggedIn', only: ['photoAdd']
+Meteor.Router.filter 'removeFlash'

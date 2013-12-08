@@ -31,5 +31,4 @@ Meteor.methods
 
     console.log 'current user', Meteor.user()
 
-
     console.log 'done'
