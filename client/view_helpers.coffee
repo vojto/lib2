@@ -6,3 +6,11 @@ Handlebars.registerHelper 'formField', (options) ->
     <input name="#{options.name}" type="#{options.type}" id="#{options.name}" />\
   </div>
   """
+
+Handlebars.registerHelper 'userAvatar', (user) ->
+  photo = Photos.findOne(user.currentPhotoId) if user
+  if photo
+    "/photos/#{photo.nameSmall}"
+  else
+    '/default_avatar.png'
+    # TODO show default image if nothing found

@@ -9,10 +9,18 @@
     <div class="list">
       {{#each messages}}
         <div class="message">
-          <div class="picture"><img src="/photos/{{userPhoto this}}"></div>
-          <strong>
-            {{user this}}
-          </strong>
+          
+          {{#with user this}}
+            <div class="picture">
+              <a href="{{userProfilePath this}}">
+                <img src="{{userAvatar this}}">
+              </a>
+            </div>
+            <strong>
+              {{username}}
+            </strong>
+          {{/with}}
+          
           {{content}}
         </div>
       {{/each}}

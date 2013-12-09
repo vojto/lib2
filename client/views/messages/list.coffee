@@ -15,8 +15,11 @@ Template.messagesList.helpers
 
   user: (message) ->
     user = Meteor.users.findOne(message.userId)
-    user.username
+    user
 
   userPhoto: (message) ->
     user = Meteor.users.findOne(message.userId)
     Photos.findOne(user.currentPhotoId).nameSmall
+
+  doSomethingWith: (what) ->
+    console.log 'what', what
