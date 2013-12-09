@@ -12,6 +12,10 @@ Meteor.Router.add
 
   '/ludia': 'userList'
 
+  '/spravy/:username':
+    to: 'conversationShow'
+    and: (username) -> Session.set('conversationOtherUsername', username)
+
   # '/posts/:_id':
   #   to: 'postPage'
   #   and: (id) -> Session.set('currentPostId', id)

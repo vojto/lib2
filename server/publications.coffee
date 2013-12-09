@@ -48,3 +48,10 @@ Meteor.publish 'messages', ->
       options: {fields: USER_FIELDS}
       mappings: [PHOTO_MAPPING]
     }]
+
+# Conversations
+# -----------------------------------------------------------------------------
+
+Meteor.publish 'conversationMessages', (conversationId) ->
+  console.log 'publishing messages', conversationId
+  ConversationMessages.find(conversationId: conversationId)

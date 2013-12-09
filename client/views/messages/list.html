@@ -11,14 +11,7 @@
         <div class="message">
           
           {{#with user this}}
-            <div class="picture">
-              <a href="{{userProfilePath this}}">
-                <img src="{{userAvatar this}}">
-              </a>
-            </div>
-            <strong>
-              {{username}}
-            </strong>
+            {{> _messageUser this}}
           {{/with}}
           
           {{content}}

@@ -14,3 +14,6 @@ Handlebars.registerHelper 'userAvatar', (user) ->
   else
     '/default_avatar.png'
     # TODO show default image if nothing found
+
+Handlebars.registerHelper 'compareObjects', (obj1, obj2) ->
+  obj1._id == obj2._id

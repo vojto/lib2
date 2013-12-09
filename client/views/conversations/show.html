@@ -1,0 +1,21 @@
+<template name="conversationShow">
+  {{conversation}}
+  {{conversationId}}
+
+  <div id="messages">
+    {{#each messages}}
+        <div class="message">
+          {{#with sender this}}
+            {{> _messageUser this}}
+          {{/with}}
+          {{content}}
+        </div>
+      {{/each}}
+
+    <div class="input">
+      <form>
+        <input type="text" />
+      </form>
+    </div>
+  </div>
+</template>

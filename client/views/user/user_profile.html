@@ -4,5 +4,9 @@
       <img src="{{userAvatar user}}">
     </div>
     <h1>{{user.username}}</h1>
+
+    {{#unless compareObjects user currentUser}}
+      <a href="{{conversationShowPath user}}">Poslat spravu</a>
+    {{/unless}}
   </div>
 </template>
