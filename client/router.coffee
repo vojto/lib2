@@ -36,5 +36,5 @@ Meteor.Router.filters
     page
 
 Meteor.Router.filter 'requireNotLoggedIn', only: 'userLogin'
-Meteor.Router.filter 'requireLoggedIn', only: ['photoAdd', 'messagesList']
+Meteor.Router.filter 'requireLoggedIn', only: ['photoAdd', 'messagesList', 'userList']
 Meteor.Router.filter 'removeFlash'
