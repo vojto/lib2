@@ -1,5 +1,10 @@
 <template name="photoAdd">
-  <h2>Pridat fotku</h2>
+  <h2>
+    Pridať fotku
+    {{#if isLoading}}
+      <img class="load" src="/load.gif" />
+    {{/if}}
+  </h2>
 
   <input type="file" />
 </template>

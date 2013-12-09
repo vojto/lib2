@@ -1,13 +1,17 @@
+@import 'colors'
+
 form.simple_form
   div.input
     margin-bottom 10px
 
     label
       display block
-      width 150px
+      width 90px
       float left
-      text-align right
+      text-align left
       padding-right 10px
+      padding-top 5px
+      box-sizing border-box
 
     &.string label
       padding-top 8px
@@ -23,5 +27,11 @@ form.simple_form
     padding 5px
     width 175px
 
+  input[type=submit]
+    background green1
+    border none
+    color #fff
+    padding 10px 15px
+
   div.actions
-    padding-left 160px
+    padding-left 90px

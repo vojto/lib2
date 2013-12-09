@@ -1,7 +1,7 @@
 <template name="userSignup">
-  <h2>Registracia</h2>
+  <h2>Registrácia</h2>
 
-  <form>
+  <form class="simple_form">
     {{formField name="username" label="Nick" type="text"}}
     {{formField name="email" label="E-mail" type="text"}}
 
@@ -9,10 +9,10 @@
     {{formField name="password_confirmation" label="Potvrdenie hesla" type="password"}}
 
     {{formField name="faculty" label="Fakulta" type="text"}}
-    {{formField name="year" label="Rocnik" type="text"}}
+    {{formField name="year" label="Ročník" type="text"}}
 
     <div class="actions">
-      <input type="submit" value="Zaregistrovat" />
+      <input type="submit" value="Zaregistrovať" />
     </div>
 
   </form>

@@ -1,15 +1,15 @@
 <template name="userLogin">
-  <h2>Log in</h2>
+  <h2>Prihlásiť sa</h2>
 
-  <form>
-    {{formField name="username" label="Username" type="text"}}
+  <form class="simple_form">
+    {{formField name="username" label="Meno" type="text"}}
 
-    {{formField name="password" label="Password" type="password"}}
+    {{formField name="password" label="Heslo" type="password"}}
 
     <div class="actions">
-      <input type="submit" />
+      <input type="submit" value="Prihlásiť sa" />
 
-      <a href="{{userSignupPath}}">Registracia</a>
+      <a href="{{userSignupPath}}">Registrácia</a>
     </div>
 
   </form>
