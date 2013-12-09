@@ -67,4 +67,4 @@ Meteor.publish 'conversationsOfCurrentUser', ->
 
 Meteor.publish 'conversationMessages', (conversationId) ->
   console.log 'publishing messages', conversationId
-  ConversationMessages.find(conversationId: conversationId)
+  ConversationMessages.find({conversationId: conversationId}, {limit: 10, sort: {timestamp: -1}})

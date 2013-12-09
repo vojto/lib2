@@ -19,7 +19,7 @@ Template.conversationShow.helpers
 
   messages: ->
     id = Session.get('conversationId')
-    ConversationMessages.find(conversationId: id)
+    ConversationMessages.find({conversationId: id}, {sort: {timestamp: 1}})
 
   sender: (message) ->
     sender = Meteor.users.findOne(message.senderId)

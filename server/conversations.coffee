@@ -40,3 +40,4 @@ Meteor.methods
       conversationId: conversation._id
       content: message.content
       senderId: currentUser._id
+      timestamp: new Date().getTime()

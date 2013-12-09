@@ -1,17 +1,19 @@
 <template name="layoutHeader">
-  <div id="status">
-    {{#if currentUser}}
-      <div class="picture">
-        <a href="{{userProfilePath currentUser}}">
-          <img src="{{userAvatar currentUser}}">
-        </a>
-      </div>
-      Si prihlaseny ako {{currentUser.username}}.
-      <a href="#" class="logout">Odhlasit sa</a>
-    {{else}}
-      <a href="{{userLoginPath}}">Prihlasit sa</a>
-      |
-      <a href="{{userSignupPath}}">Registracia</a>
-    {{/if}}
+  <div id="header">
+    <div id="status">
+      {{#if currentUser}}
+        <div class="picture">
+          <a href="{{userProfilePath currentUser}}">
+            <img src="{{userAvatar currentUser}}">
+          </a>
+        </div>
+        Si prihlaseny ako {{currentUser.username}}.
+        <a href="#" class="logout">Odhlasit sa</a>
+      {{else}}
+        <a href="{{userLoginPath}}">Prihlasit sa</a>
+        |
+        <a href="{{userSignupPath}}">Registracia</a>
+      {{/if}}
+    </div>
   </div>
 </template>

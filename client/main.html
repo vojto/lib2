@@ -2,16 +2,14 @@
   <title>Libko</title>
 </head>
 <body>
-  <div id="header">
-    {{> layoutHeader}}
-    <a href='/' id="logo"></a>
+  <div id="navigation">
+    <a class="nav" id="logo" href="/"></a>
+    <a class="nav" id="messages" href="{{messagesListPath}}"></a>
+    <a class="nav" id="users" href="{{userListPath}}"></a>
+    {{> _conversationsList}}
   </div>
   <div id="content">
-    <div>
-      <a href="{{userListPath}}">Ludia</a> |
-      <a href="{{messagesListPath}}">Chat</a> |
-      {{> _conversationsList}}
-    </div>
+    {{> layoutHeader}}
     {{> flash}}
     {{renderPage}}
   </div>
