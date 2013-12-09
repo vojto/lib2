@@ -1,0 +1,12 @@
+<template name="userList">
+  {{#each users}}
+    <div class="user">
+      <div class="picture">
+        <a href="{{userProfilePath this}}">
+          <img src="{{userAvatar this}}">
+        </a>
+      </div>
+      <strong>{{username}}</strong>
+    </div>
+  {{/each}}
+</template>

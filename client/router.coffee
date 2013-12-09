@@ -10,6 +10,8 @@ Meteor.Router.add
     to: 'userProfile'
     and: (username) -> Session.set('profileUsername', username)
 
+  '/ludia': 'userList'
+
   # '/posts/:_id':
   #   to: 'postPage'
   #   and: (id) -> Session.set('currentPostId', id)
