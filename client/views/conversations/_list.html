@@ -1,0 +1,8 @@
+<template name="_conversationsList">
+  Konverzacie:
+  {{#each conversations}}
+    {{#with otherUser this}}
+      <a href="{{conversationShowPath username}}">{{username}}</a>
+    {{/with}}
+  {{/each}}
+</template>

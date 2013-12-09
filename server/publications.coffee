@@ -4,6 +4,11 @@ Meteor.publish 'photos', ->
 USER_FIELDS = {currentPhotoId: 1, username: 1}
 
 PHOTO_MAPPING = {key: 'currentPhotoId', collection: Photos}
+USER_MAPPING = (key) ->
+  key: key
+  collection: Meteor.users
+  options: {fields: USER_FIELDS}
+  mappings: [PHOTO_MAPPING]
 
 # Users
 # -----------------------------------------------------------------------------
@@ -51,6 +56,14 @@ Meteor.publish 'messages', ->
 
 # Conversations
 # -----------------------------------------------------------------------------
+
+Meteor.publish 'conversationsOfCurrentUser', ->
+  Meteor.publishWithRelations
+    handle: @
+    collection: Conversations
+    filter: {$or: [{user1Id: @userId}, {user2Id: @userId}]}
+    mappings: [USER_MAPPING('user1Id', 'user2Id')]
+    
 
 Meteor.publish 'conversationMessages', (conversationId) ->
   console.log 'publishing messages', conversationId

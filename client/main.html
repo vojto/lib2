@@ -8,8 +8,9 @@
   </div>
   <div id="content">
     <div>
-      <a href="{{userListPath}}">Ludia</a>
-      <a href="{{messagesListPath}}">Chat</a>
+      <a href="{{userListPath}}">Ludia</a> |
+      <a href="{{messagesListPath}}">Chat</a> |
+      {{> _conversationsList}}
     </div>
     {{> flash}}
     {{renderPage}}

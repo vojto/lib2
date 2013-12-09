@@ -9,8 +9,6 @@ Meteor.methods
     if !user
       throw new Meteor.Error(404, "User not found");
 
-
-
     # Try to find the conversation
     conversation = Conversations.findOne
       $or: [{
