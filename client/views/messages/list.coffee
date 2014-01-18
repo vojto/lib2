@@ -1,3 +1,7 @@
+replaceURLWithHTMLLinks = (text) ->
+    exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig
+    text.replace(exp,"<a href='$1' target='_blank'>$1</a>")
+
 Template.messagesList.events
   'submit form': (ev) ->
     ev.preventDefault()
@@ -23,3 +27,7 @@ Template.messagesList.helpers
 
   doSomethingWith: (what) ->
     console.log 'what', what
+
+  formatContent: (content) ->
+    escaped = $('<div/>').text(content).html()
+    replaceURLWithHTMLLinks(escaped)
