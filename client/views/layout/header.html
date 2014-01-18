@@ -8,8 +8,9 @@
           </a>
         </div>
         Si prihlaseny ako {{currentUser.username}}.
-        <a href="#" class="logout">[Odhlasit sa]</a>
+        <a href="{{userProfilePath currentUser}}">[Moj profil]</a>
         <a href="{{photoAddPath}}">[Zmenit profilovku]</a>
+        <a href="#" class="logout">[Odhlasit sa]</a>
       {{else}}
         <a href="{{userLoginPath}}">Prihlásit sa</a>
         |

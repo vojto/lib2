@@ -1,1 +1,2 @@
 rsync -r -v --exclude=public/uploads/* --exclude=.git . edukit@edukit.eu:/var/apps/lib2
+ssh edukit@edukit.eu "touch /var/apps/lib2/tmp/restart.txt"
