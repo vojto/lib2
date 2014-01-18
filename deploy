@@ -1,0 +1,1 @@
+rsync -r -v --exclude=public/uploads/* --exclude=.git . edukit@edukit.eu:/var/apps/lib2
