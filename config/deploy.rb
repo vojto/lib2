@@ -33,9 +33,9 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       within current_path do
-        # execute "pm2", "sendSignal", "", fetch(:application)
+        execute "pm2", "sendSignal", "SIGINT", fetch(:application)
         # execute "pm2", "delete", fetch(:application)
-        execute "pm2", "start", "#{current_path}/bundle/main.js", "-f", "-n", fetch(:application)
+        # execute "pm2", "start", "#{current_path}/bundle/main.js", "-f", "-n", fetch(:application)
       end
     end
   end
