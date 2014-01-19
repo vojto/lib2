@@ -8,7 +8,7 @@ Meteor.methods
       throw new Meteor.Error(401, "Not logged in");
 
     chroot = Meteor.chroot
-    directory = path.resolve("#{process.cwd()}/../../../../../public/photos")
+    directory = path.resolve("#{process.env.PUBLIC_PATH}/photos")
     path = "#{directory}/#{name}"
     nameSmall = name.replace(/(.*)(\.[^\.]+)$/, '$1_small$2')
     pathSmall = "#{directory}/#{nameSmall}"

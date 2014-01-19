@@ -1,2 +1,7 @@
-rsync -r -v --exclude=public/uploads/* --exclude=.git . edukit@edukit.eu:/var/apps/lib2
-ssh edukit@edukit.eu "touch /var/apps/lib2/tmp/restart.txt"
+# rsync -r -v --exclude=public/uploads/* --exclude=.git . edukit@edukit.eu:/var/apps/lib2
+# ssh edukit@edukit.eu "touch /var/apps/lib2/tmp/restart.txt"
+
+mrt bundle bundle.tar.gz
+scp bundle.tar.gz edukit@edukit.eu:/var/apps/
+ssh edukit@edukit.eu "cd /var/apps; tar xvf bundle.tar.gz; rm -rf lib2; mv bundle lib2; rm bundle.tar.gz"
+
