@@ -2,8 +2,8 @@ Meteor.subscribe 'currentUserPhoto'
 Meteor.subscribe 'messages'
 Meteor.subscribe 'currentUser'
 Meteor.subscribe 'allUsers'
+Meteor.subscribe 'onlineUsers'
 Meteor.subscribe 'conversationsOfCurrentUser'
-Meteor.subscribe 'allPresences'
 
 Deps.autorun ->
   Meteor.subscribe 'profileUser', Session.get('profileUsername')

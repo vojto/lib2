@@ -12,5 +12,5 @@ router
 coffeescript
 imagemagick
 publish-with-relations
-presence
 moment
+user-status

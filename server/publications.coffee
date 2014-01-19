@@ -1,7 +1,7 @@
 Meteor.publish 'photos', ->
   Photos.find()
 
-USER_FIELDS = {currentPhotoId: 1, username: 1}
+USER_FIELDS = {currentPhotoId: 1, username: 1, 'status.online': 1}
 
 PHOTO_MAPPING = {key: 'currentPhotoId', collection: Photos}
 USER_MAPPING = (key) ->
@@ -32,18 +32,13 @@ Meteor.publish 'allUsers', ->
     options: {fields: USER_FIELDS, limit: 30}
     mappings: [PHOTO_MAPPING]
 
-Meteor.publish 'allPresences', ->
+Meteor.publish 'onlineUsers', ->
   Meteor.publishWithRelations
     handle: @
-    collection: Meteor.presences
-    filter: {state: 'online'}
-    options: {}
-    mappings: [{
-      key: 'userId'  
-      collection: Meteor.users
-      options: {fields: USER_FIELDS}
-      mappings: [PHOTO_MAPPING]
-    }]
+    collection: Meteor.users
+    filter: {'status.online': true}
+    options: {fields: USER_FIELDS}
+    mappings: [PHOTO_MAPPING]
 
 # Photos
 # -----------------------------------------------------------------------------

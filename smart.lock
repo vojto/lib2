@@ -5,11 +5,8 @@
       "router": {},
       "imagemagick": {},
       "publish-with-relations": {},
-      "presence": {
-        "git": "https://github.com/dburles/meteor-presence.git",
-        "branch": "master"
-      },
-      "moment": {}
+      "moment": {},
+      "user-status": {}
     },
     "packages": {
       "router": {
@@ -27,15 +24,15 @@
         "tag": "v0.1.5",
         "commit": "98213e9f056b139597c99fb9ec2884ae6be76d91"
       },
-      "presence": {
-        "git": "https://github.com/dburles/meteor-presence.git",
-        "branch": "master",
-        "commit": "7c3d84d291478317e9938dfed92fb957c8ac60a8"
-      },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.2.1",
         "commit": "9ee12e714afe56b189f53076447b7b54f3012065"
+      },
+      "user-status": {
+        "git": "https://github.com/mizzao/meteor-user-status.git",
+        "tag": "v0.2.0",
+        "commit": "e18cc48440710d0ac23bd1a578974f9142226bf4"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
