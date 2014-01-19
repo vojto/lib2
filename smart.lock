@@ -5,7 +5,10 @@
       "router": {},
       "imagemagick": {},
       "publish-with-relations": {},
-      "presence": {},
+      "presence": {
+        "git": "https://github.com/dburles/meteor-presence.git",
+        "branch": "master"
+      },
       "moment": {}
     },
     "packages": {
@@ -25,9 +28,9 @@
         "commit": "98213e9f056b139597c99fb9ec2884ae6be76d91"
       },
       "presence": {
-        "git": "https://github.com/tmeasday/meteor-presence.git",
-        "tag": "v0.3.0",
-        "commit": "bc619727e46ee46573ec319f73f95f8be0d3247c"
+        "git": "https://github.com/dburles/meteor-presence.git",
+        "branch": "master",
+        "commit": "7c3d84d291478317e9938dfed92fb957c8ac60a8"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",

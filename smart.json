@@ -3,7 +3,9 @@
     "router": {},
     "imagemagick": {},
     "publish-with-relations": {},
-    "presence": {},
+    "presence": {
+      "git": "https://github.com/dburles/meteor-presence.git"
+    },
     "moment": {}
   }
 }

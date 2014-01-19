@@ -32,6 +32,19 @@ Meteor.publish 'allUsers', ->
     options: {fields: USER_FIELDS, limit: 30}
     mappings: [PHOTO_MAPPING]
 
+Meteor.publish 'allPresences', ->
+  Meteor.publishWithRelations
+    handle: @
+    collection: Meteor.presences
+    filter: {state: 'online'}
+    options: {}
+    mappings: [{
+      key: 'userId'  
+      collection: Meteor.users
+      options: {fields: USER_FIELDS}
+      mappings: [PHOTO_MAPPING]
+    }]
+
 # Photos
 # -----------------------------------------------------------------------------
 

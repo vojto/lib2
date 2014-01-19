@@ -1,0 +1,9 @@
+<template name="onlineUsers">
+  <div id="user-list">
+    {{#each onlineUsers}}
+      <div class="user">
+        {{> _messageUser this}}
+      </div>
+    {{/each}}
+  </div>
+</template>
