@@ -17,3 +17,6 @@ Handlebars.registerHelper 'userAvatar', (user) ->
 
 Handlebars.registerHelper 'compareObjects', (obj1, obj2) ->
   obj1._id == obj2._id
+
+Handlebars.registerHelper 'timestampFormat', (timestamp) ->
+  moment.unix(timestamp).format('D.M. H:mm:ss')

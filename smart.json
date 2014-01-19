@@ -3,6 +3,7 @@
     "router": {},
     "imagemagick": {},
     "publish-with-relations": {},
-    "presence": {}
+    "presence": {},
+    "moment": {}
   }
 }

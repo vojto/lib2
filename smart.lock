@@ -5,7 +5,8 @@
       "router": {},
       "imagemagick": {},
       "publish-with-relations": {},
-      "presence": {}
+      "presence": {},
+      "moment": {}
     },
     "packages": {
       "router": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/tmeasday/meteor-presence.git",
         "tag": "v0.3.0",
         "commit": "bc619727e46ee46573ec319f73f95f8be0d3247c"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.2.1",
+        "commit": "9ee12e714afe56b189f53076447b7b54f3012065"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
