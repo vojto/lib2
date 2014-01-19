@@ -16,6 +16,9 @@ Handlebars.registerHelper 'userAvatar', (user) ->
     # TODO show default image if nothing found
 
 Handlebars.registerHelper 'compareObjects', (obj1, obj2) ->
+  if !obj1 || !obj2
+    return false
+  
   obj1._id == obj2._id
 
 Handlebars.registerHelper 'timestampFormat', (timestamp) ->
