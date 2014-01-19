@@ -1,27 +1,36 @@
 <template name="messagesList">
-  <div id="messages">
-    <div class="input">
-      <form>
-        <input type="text" />
-      </form>
-    </div>
-
-    <div class="list">
-      {{#each messages}}
-        <div class="message">
-          
-          {{#with user this}}
-            {{> _messageUser this}}
-          {{/with}}
-          
-          {{{formatContent content}}}
+  <table id="messages-layout">
+    <tr>
+      <td id="messages">
+        <div class="input">
+          <form>
+            <input type="text" />
+          </form>
         </div>
-      {{/each}}
-    </div>
 
-  </div>
+        <div class="list">
+          {{#each messages}}
+            <div class="message">
+              
+              {{#with user this}}
+                {{> _messageUser this}}
+              {{/with}}
+              
+              {{{formatContent content}}}
+            </div>
+          {{/each}}
+        </div>
+      </td>
 
-  <div id="presence">
-    Who's here:
-  </div>
+      <td id="presence">
+        Who's here:
+
+        <ul>
+          <li>
+            <a href="#">vojto</a>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 </template>
