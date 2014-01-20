@@ -16,5 +16,6 @@ Meteor.startup ->
   console.log 'messages: ', messages
   Messages.find({}, {sort: {timestamp: -1}, limit: 1}).observe
     addedAt: (message, atIndex, before) ->
-      if message.userId != Meteor.userId()
+      return unless Meteor.user()
+      if message.userId != Meteor.userId() && message.content.indexOf(Meteor.user().username) > -1
         sound.play()
