@@ -1,7 +1,7 @@
 Template.photoAdd.events
   'change input': (ev) ->
     Session.set('isLoading', true)
-    blob = ev.srcElement.files[0]
+    blob = ev.target.files[0]
     reader = new FileReader()
     self = @
     reader.onload = (file) ->
