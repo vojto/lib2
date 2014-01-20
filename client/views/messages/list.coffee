@@ -31,3 +31,8 @@ Template.messagesList.helpers
   formatContent: (content) ->
     escaped = $('<div/>').text(content).html()
     replaceURLWithHTMLLinks(escaped)
+
+  messageClass: (message) ->
+    if message.content.indexOf(Meteor.user().username) > -1
+      'mention'
+    

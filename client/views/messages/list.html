@@ -10,7 +10,7 @@
 
         <div class="list">
           {{#each messages}}
-            <div class="message">
+            <div class="message {{messageClass this}}">
               
               {{#with user this}}
                 {{> _messageUser this}}
