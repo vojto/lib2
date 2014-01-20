@@ -5,7 +5,8 @@ Template.photoAdd.events
     reader = new FileReader()
     self = @
     reader.onload = (file) ->
-      Meteor.call 'photoAdd', file.srcElement.result, blob.name, ->
+      debugger
+      Meteor.call 'photoAdd', file.target.result, blob.name, ->
         Session.set('isLoading', false)
       	Meteor.Router.to('/')
     reader.readAsBinaryString(blob)
