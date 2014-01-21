@@ -3,22 +3,13 @@ set :repo_url, 'git@github.com:vojto/lib2.git'
 set :scm, :git
 set :deploy_to, '/var/apps/lib2'
 set :user, 'edukit'
-
 set :use_sudo, false
-
-# This is a Rails-specific param, just want to disable the functionality
 set :normalize_asset_timestamps, false
-
 set :shared_children, %w(log public)
-
-# Set this to 'mrt' if you want to use Meteorite
 set :meteor, 'mrt'
-
-# set :format, :pretty
-# set :log_level, :debug
 set :pty, true
 
-# set :linked_files, %w{config/database.yml}
+# Upload directory
 set :linked_dirs, %w{public/photos}
 
 set :default_env, {
@@ -36,7 +27,6 @@ namespace :deploy do
         execute "pm2", "sendSignal", "SIGKILL", fetch(:application)
         execute "pm2", "delete", fetch(:application)
         execute "pm2", "start", "#{current_path}/bundle/main.js", "-n", fetch(:application)
-        # execute "pm2", "delete", fetch(:application)
       end
     end
   end
@@ -49,6 +39,5 @@ after 'deploy:updated', :meteor_bundle do
     execute "rm -rf #{File.join(release_path, "bundle.tgz")}"
   end
 end
-
 
 after 'deploy:publishing', 'deploy:restart'
